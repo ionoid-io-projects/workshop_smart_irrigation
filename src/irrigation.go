@@ -41,11 +41,12 @@ func main() {
 		//		fmt.Println(pin.Read())
 		if pin.Read() == 1 { // check if event occured
 			fmt.Println("Water not detected....")
-			time.Sleep(time.Second * 2)
+			time.Sleep(time.Second * 1)
 			pinR.Toggle()
 		} else {
 			fmt.Println("Water detected....")
 			pinR.Low()
 		}
+		time.Sleep(time.Second * 1)
 	}
 }
